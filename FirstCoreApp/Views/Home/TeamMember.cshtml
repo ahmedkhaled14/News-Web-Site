@@ -1,0 +1,42 @@
+﻿@model List<TeamMember> 
+
+
+
+
+<section id="doctors" class="doctors section-bg">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Ahmed Khaled Is The Only Member Until Now</h2>
+        </div>
+
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+
+
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-img">
+                        <img src="~/images/TeamMembers/@item.Image" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href=""><i class="icofont-twitter"></i></a>
+                            <a href=""><i class="icofont-facebook"></i></a>
+                            <a href=""><i class="icofont-instagram"></i></a>
+                            <a href=""><i class="icofont-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4 class="text-info">@item.Name</h4>
+                        <span class="text-primary">@item.JobTitle</span>
+                    </div>
+                </div>
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+</section>
